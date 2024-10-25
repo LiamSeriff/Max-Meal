@@ -12,6 +12,11 @@ import {
   NavLinks,
 } from "./Navbar.elements";
 
+/*
+  The code in this file and Navbar.elements.tsx is taken from https://www.youtube.com/watch?v=iP_HqoCuRI0 by Brian Design and
+  I followed along with his tutorial to learn React and styled-components.
+*/
+
 const Navbar = () => {
   const [click, setClick] = useState(false);
 

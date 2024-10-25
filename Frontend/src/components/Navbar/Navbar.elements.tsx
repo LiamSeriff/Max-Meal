@@ -3,6 +3,11 @@ import { LuSalad } from "react-icons/lu";
 import { Link } from "react-router-dom";
 import { Container } from "../../globalStyles";
 
+/*
+  The code in this file and Navbar.tsx is taken from https://www.youtube.com/watch?v=iP_HqoCuRI0 by Brian Design and
+  I followed along with his tutorial to learn React and styled-components.
+*/
+
 export const Nav = styled.nav`
   background: #101522;
   height: 100px;
