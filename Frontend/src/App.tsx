@@ -15,6 +15,8 @@ import SignUp from "./pages/SignUp/SignUp";
 import UserHome from "./pages/UserHome/UserHome";
 import GroceryList from "./pages/GroceryList/GroceryList";
 import Recipes from "./pages/Recipes/Recipes";
+import MealPlanner from "./pages/MealPlanner/MealPlanner";
+import Profile from "./pages/Profile/Profile";
 
 function App() {
   //const [alertVisible, setAlertVisibility] = useState(false)
@@ -31,6 +33,8 @@ function App() {
           <Route path="/user-home" element={<UserHome />}></Route>
           <Route path="/grocery-list" element={<GroceryList />}></Route>
           <Route path="/recipes" element={<Recipes />}></Route>
+          <Route path="/meal-planner" element={<MealPlanner />}></Route>
+          <Route path="/profile" element={<Profile />}></Route>
         </Routes>
       </Router>
     </>

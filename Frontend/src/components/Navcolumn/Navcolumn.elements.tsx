@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 import background from "../../images/meal-prep-background-large.jpeg";
 
 export const Background = styled.div`
+  position: relative;
   background-size: cover;
   background-position-y: center;
   justify-content: center;
