@@ -7,7 +7,7 @@ import {
   InputItem,
   Input,
   NavBtnLink,
-} from "./Data";
+} from "./SignUp_Data";
 
 const SignUp = () => {
   return (

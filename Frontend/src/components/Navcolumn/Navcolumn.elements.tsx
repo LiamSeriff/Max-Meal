@@ -5,10 +5,8 @@ import { Link } from "react-router-dom";
 import background from "../../images/meal-prep-background-large.jpeg";
 
 export const Background = styled.div`
-  height: 100vh;
-  width: 100%;
   background-size: cover;
-  background-attachment: fixed;
+  background-position-y: center;
   justify-content: center;
   background-image: url(${background});
   z-index: 1;

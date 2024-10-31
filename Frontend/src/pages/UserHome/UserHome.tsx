@@ -6,7 +6,7 @@ import {
   Body,
   NavBtnLink,
   ContainerItem,
-} from "./Data";
+} from "./UserHome_Data";
 
 const UserHome = () => {
   return (
@@ -23,7 +23,7 @@ const UserHome = () => {
             </Body>
           </ContainerItem>
           <ContainerItem>
-            <NavBtnLink to="/recipes">Recipies</NavBtnLink>
+            <NavBtnLink to="/recipes">Recipes</NavBtnLink>
             <Body>
               The Recipes section allows users to discover, save, and organize
               healthy recipes. Filter through a variety of meals, dietary

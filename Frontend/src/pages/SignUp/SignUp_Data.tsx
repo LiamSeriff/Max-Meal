@@ -4,10 +4,9 @@ import { LuSalad } from "react-icons/lu";
 import { Link } from "react-router-dom";
 
 export const Background = styled.div`
-  height: 100vh;
-  width: 100%;
   background-size: cover;
-  background-attachment: fixed;
+  background-position-y: center;
+  background-attachment: scroll;
   justify-content: center;
   background-image: url(${background});
   z-index: 1;

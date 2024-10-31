@@ -7,7 +7,7 @@ import {
   InputItem,
   Input,
   NavBtnLink,
-} from "./Data";
+} from "./Login_Data";
 
 const Login = () => {
   return (

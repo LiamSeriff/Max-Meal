@@ -3,16 +3,14 @@ import { Link } from "react-router-dom";
 import background from "../../images/ingredients-background.jpg";
 
 export const Background = styled.div`
-  height: 100vh;
-  width: 100%;
   background-size: cover;
   background-attachment: fixed;
   justify-content: center;
   background-image: url(${background});
-  z-index: 1;
 `;
 
 export const Container = styled.ul`
+  position: relative;
   display: grid;
   grid-row-gap: 20px;
   align-items: center;
@@ -32,8 +30,9 @@ export const Container = styled.ul`
 `;
 
 export const Header = styled.h1`
-  position: relative;
-  top: 20px;
+  position: absolute;
+  top: 3px;
+  left: 30px;
   color: white;
   font-size: 3rem;
 `;
@@ -42,11 +41,12 @@ export const ContainerItem = styled.li`
   display: block;
   align-items: center;
   padding-bottom: 30px;
-  margin-bottom: 150px;
+  margin: 0px;
 `;
 
 export const Body = styled.p`
   position: absolute;
+  margin-right: 15px;
   display: flex;
   justify-content: center;
   align-items: left;
@@ -61,7 +61,7 @@ export const Body = styled.p`
 
 export const NavBtnLink = styled(Link)`
   display: flex;
-  position: sticky;
+  position: static;
   justify-content: center;
   align-items: center;
   text-decoration: none;

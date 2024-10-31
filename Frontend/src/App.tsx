@@ -13,12 +13,11 @@ import Home from "./pages/HomePage/Home";
 import Login from "./pages/Login/Login";
 import SignUp from "./pages/SignUp/SignUp";
 import UserHome from "./pages/UserHome/UserHome";
+import GroceryList from "./pages/GroceryList/GroceryList";
+import Recipes from "./pages/Recipes/Recipes";
 
 function App() {
-  const [alertVisible, setAlertVisibility] = useState(false);
-
-  let items = ["New York", "San Francisco", "Tokyo", "London", "Paris"];
-
+  //const [alertVisible, setAlertVisibility] = useState(false)
   //<ListGroup items={items} heading="Cities" onSelectItem={handleSelectItem}/>
 
   return (
@@ -30,6 +29,8 @@ function App() {
           <Route path="/login" element={<Login />}></Route>
           <Route path="/sign-up" element={<SignUp />}></Route>
           <Route path="/user-home" element={<UserHome />}></Route>
+          <Route path="/grocery-list" element={<GroceryList />}></Route>
+          <Route path="/recipes" element={<Recipes />}></Route>
         </Routes>
       </Router>
     </>
