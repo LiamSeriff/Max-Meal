@@ -14,7 +14,6 @@ export const Container = styled.ul`
   display: grid;
   grid-row-gap: 20px;
   align-items: center;
-  position: sticky;
   height: 100vh;
   width: auto;
   margin-left: 40%;

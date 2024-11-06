@@ -1,10 +1,36 @@
 import React from "react";
-import Navcolumn from "../../components/Navcolumn/Navcolumn";
+import {
+  Background,
+  CenterColumn,
+  NavcolumnContainer,
+  Logo,
+  Icon,
+  NavItemBtn,
+  NavBtnLink,
+  AboutBtn,
+  AboutBtnLink,
+} from "./Home_Data";
+import { Button } from "../../globalStyles";
+import backgroundImg from "../../images/meal-prep-background-large.jpeg";
 
 const Home = () => {
   return (
     <>
-      <Navcolumn />
+      <Background>
+        <AboutBtn>
+          <AboutBtnLink to="/about">About</AboutBtnLink>
+        </AboutBtn>
+        <CenterColumn>
+          <Logo>
+            <Icon />
+            Max Meal
+          </Logo>
+          <NavItemBtn>
+            <NavBtnLink to="/login">Login</NavBtnLink>
+            <NavBtnLink to="/sign-up">Sign Up</NavBtnLink>
+          </NavItemBtn>
+        </CenterColumn>
+      </Background>
     </>
   );
 };
