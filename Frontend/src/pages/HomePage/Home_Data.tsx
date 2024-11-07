@@ -13,7 +13,7 @@ export const Background = styled.div`
   z-index: 1;
 `;
 
-export const CenterColumn = styled.ul`
+export const CenterColumn = styled.div`
   background: #101522;
   height: 100vh;
   display: grid;
@@ -52,7 +52,7 @@ export const NavItemBtn = styled.li`
   justify-content: center;
   align-items: center;
   width: 100%;
-  height: 200px;
+  height: 300px;
   padding-bottom: 20px;
 `;
 
@@ -82,7 +82,7 @@ export const NavBtnLink = styled(Link)`
 
 export const AboutBtnLink = styled(NavBtnLink)`
   color: white;
-  border: black;
+  border: white;
   border-style: solid;
   background-color: #101522;
   opacity: 90%;

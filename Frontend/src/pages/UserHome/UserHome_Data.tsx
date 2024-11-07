@@ -9,7 +9,7 @@ export const Background = styled.div`
   background-image: url(${background});
 `;
 
-export const Container = styled.ul`
+export const Container = styled.div`
   position: relative;
   display: grid;
   grid-row-gap: 20px;
@@ -17,6 +17,7 @@ export const Container = styled.ul`
   height: 100vh;
   width: auto;
   margin-left: 40%;
+  padding-left: 5px;
   background: #101522;
   opacity: 90%;
 

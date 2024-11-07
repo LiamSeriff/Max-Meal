@@ -1,12 +1,22 @@
 import React from "react";
-import { PageContainer } from "./Profile_Data";
+import {
+  PageContainer,
+  Background,
+  ProfileDiv,
+  ProfileHeaderContainer,
+  ProfileHeader,
+} from "./Profile_Data";
 
 const Profile = () => {
   return (
     <>
-      <PageContainer>
-        <div>Profile</div>
-      </PageContainer>
+      <Background>
+        <ProfileDiv>
+          <ProfileHeaderContainer>
+            <ProfileHeader>Profile</ProfileHeader>
+          </ProfileHeaderContainer>
+        </ProfileDiv>
+      </Background>
     </>
   );
 };

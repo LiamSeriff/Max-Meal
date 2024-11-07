@@ -8,7 +8,6 @@ import {
   StyledRecipeCard,
 } from "./Recipes_Data";
 import ActionAreaCard from "../../components/MaterialUIRecipe";
-import { Button } from "@mui/material";
 
 const Recipes = () => {
   return (
@@ -33,7 +32,16 @@ const Recipes = () => {
             className={StyledButton}
             onClick={() => console.log("Clicked")}
           ></StyledRecipeCard>
-          <ActionAreaCard />
+          <ActionAreaCard
+            image="src\images\bbq-chicken-pizza.jpeg"
+            header="BBQ chicken pizza"
+            body="bbq chicken pizza"
+          />
+          <ActionAreaCard
+            image="src\images\bbq-chicken-pizza.jpeg"
+            header="BBQ chicken pizza"
+            body="bbq chicken pizza"
+          />
         </RecipeListContainer>
       </PageContainer>
     </>

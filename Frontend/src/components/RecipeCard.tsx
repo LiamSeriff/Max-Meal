@@ -1,14 +1,22 @@
+import styled from "styled-components";
+import image from "../images/bbq-chicken-pizza.jpeg";
+
 interface Props {
   children?: string;
   className: string;
   onClick: () => void;
 }
 
+const StyledCardImage = styled.img`
+  width: 290px;
+  height: 100px;
+`;
+
 const RecipeCard = ({ className }: Props) => {
   return (
     <>
       <div className={className}>
-        <img src="..." alt="..." />
+        <StyledCardImage src={image} alt="..." />
         <div>
           <h5>Card title</h5>
           <p>
