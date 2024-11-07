@@ -4,7 +4,7 @@ export const PageContainer = styled.div`
   position: relative;
   height: 100vh;
   width: 100vw;
-  background-color: tan;
+  background-color: #e8e8e8;
 `;
 
 export const IngredientsContainer = styled.div`
