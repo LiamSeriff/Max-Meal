@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import {
   Navbar,
@@ -12,16 +11,13 @@ import GlobalStyle from "./globalStyles";
 import Home from "./pages/HomePage/Home";
 import Login from "./pages/Login/Login";
 import SignUp from "./pages/SignUp/SignUp";
-import UserHome from "./pages/UserHome/UserHome";
+import UserHome from "./pages/UserHome/UserHome";  // Imported here
 import GroceryList from "./pages/GroceryList/GroceryList";
 import Recipes from "./pages/Recipes/Recipes";
 import MealPlanner from "./pages/MealPlanner/MealPlanner";
 import Profile from "./pages/Profile/Profile";
 
 function App() {
-  //const [alertVisible, setAlertVisibility] = useState(false)
-  //<ListGroup items={items} heading="Cities" onSelectItem={handleSelectItem}/>
-
   return (
     <>
       <Router>
@@ -30,7 +26,7 @@ function App() {
           <Route path="/" element={<Home />}></Route>
           <Route path="/login" element={<Login />}></Route>
           <Route path="/sign-up" element={<SignUp />}></Route>
-          <Route path="/user-home" element={<UserHome />}></Route>
+          <Route path="/user-home" element={<UserHome />}></Route>  {/* UserHome as a route */}
           <Route path="/grocery-list" element={<GroceryList />}></Route>
           <Route path="/recipes" element={<Recipes />}></Route>
           <Route path="/meal-planner" element={<MealPlanner />}></Route>

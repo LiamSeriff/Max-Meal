@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useState } from "react";
+import axios from "axios";
 import {
   Background,
   CenterColumn,
@@ -7,9 +8,28 @@ import {
   InputItem,
   Input,
   NavBtnLink,
+  button,
 } from "./SignUp_Data";
 
-const SignUp = () => {
+const SignUp = () => {    
+  const [email, setEmail] = useState("");  
+  const [username, setUsername] = useState("");
+  const [password, setPassword] = useState("");
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+  
+    const userData = { email, username, password };
+
+    try {
+      const response = await axios.post('http://localhost:5001/api/signup', userData);
+      console.log(response.data);
+    } catch(error) {
+      console.error("There was an error signing up:", error);
+      alert("Error signing up!");
+    }
+  };
+
   return (
     <>
       <Background>
@@ -18,27 +38,36 @@ const SignUp = () => {
             <Icon />
             Sign Up
           </Logo>
-          <InputItem>
-            <Input
-              type="email"
-              className="form-control"
-              id="email"
-              placeholder="Email"
-            ></Input>
-            <Input
-              type="username"
-              className="form-control"
-              id="username"
-              placeholder="Username"
-            ></Input>
-            <Input
-              type="password"
-              className="form-control"
-              id="password"
-              placeholder="Password"
-            ></Input>
-            <NavBtnLink to="/login">Sign Up!</NavBtnLink>
-          </InputItem>
+          <form onSubmit={handleSubmit}>
+            <InputItem>
+              <Input
+                type="email"
+                className="form-control"
+                id="email"
+                placeholder="Email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+              />
+              <Input
+                type="text" // Changed to "text" for username field
+                className="form-control"
+                id="username"
+                placeholder="Username"
+                value={username}
+                onChange={(e) => setUsername(e.target.value)}
+              />
+              <Input
+                type="password"
+                className="form-control"
+                id="password"
+                placeholder="Password"
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+              />
+            </InputItem>
+            <button type="submit">Sign Up</button>
+          </form>
+          <NavBtnLink to="/login">Already have an account? Log in</NavBtnLink> {/* Optional navigation link */}
         </CenterColumn>
       </Background>
     </>
