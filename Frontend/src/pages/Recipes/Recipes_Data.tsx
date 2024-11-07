@@ -6,7 +6,7 @@ export const PageContainer = styled.div`
   position: relative;
   height: 100vh;
   width: 100vw;
-  background-color: tan;
+  background: #252525;
 `;
 
 export const InputContainer = styled.div`
@@ -58,11 +58,63 @@ export const RecipeListContainer = styled.div`
 `;
 
 export const StyledRecipeCard = styled(RecipeCard)`
-  background-color: coral;
+  background-color: teal;
   width: 300px;
   height: 300px;
-  margin: 5px;
+  margin-left: 2px;
   border-color: black;
   border-style: solid;
-  border-width: 2px;
+  border-width: 0;
+`;
+
+export const StyledRecipeButton = styled(Button)`
+  background-color: teal;
+  border-style: solid;
+  border-color: black;
+  border-width: 3px;
+  border-radius: 5px;
+  width: 310px;
+  height: 310px;
+
+  &:hover {
+    transition: all 0.3s ease-out;
+    color: white;
+    background-color: #007777;
+  }
+`;
+
+export const BlurredDiv = styled.div`
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  color: white;
+  backdrop-filter: blur(8px);
+  z-index: 100;
+`;
+
+export const CloseButton = styled(Button)`
+  position: absolute;
+  color: white;
+  font-size: 3rem;
+  right: 5%;
+  top: 5%;
+  background: none;
+  border: none;
+
+  &:hover {
+    color: black;
+  }
+`;
+
+export const PopupDiv = styled.div`
+  position: absolute;
+  width: 70vw;
+  height: 70vh;
+  margin-left: 15vw;
+  margin-top: 15vh;
+  background-color: white;
+  border-style: solid;
+  border-color: black;
+  border-width: 5px;
+  border-radius: 20px;
 `;

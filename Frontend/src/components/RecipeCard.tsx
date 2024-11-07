@@ -1,20 +1,29 @@
 import styled from "styled-components";
-import image from "../images/bbq-chicken-pizza.jpeg";
 
 interface Props {
   children?: string;
   className: string;
-  onClick: () => void;
+  image: string;
+  header: string;
+  body: string;
 }
 
 const StyledCardImage = styled.img`
   height: 160px;
   width: 100%;
+  border: black;
+  border-style: solid;
+  border-width: 2px;
+  border-radius: 2px;
+`;
+
+const StyledHeader4 = styled.h4`
+  text-decoration: underline;
 `;
 
 const ImageContainer = styled.div``;
 
-const RecipeCard = ({ className }: Props) => {
+const RecipeCard = ({ className, image, header, body }: Props) => {
   return (
     <>
       <div className={className}>
@@ -22,11 +31,8 @@ const RecipeCard = ({ className }: Props) => {
           <StyledCardImage src={image} alt="..." />
         </ImageContainer>
         <div>
-          <h4>Card title</h4>
-          <p>
-            Some quick example text to build on the card title and make up the
-            bulk of the card's content.
-          </p>
+          <StyledHeader4>{header}</StyledHeader4>
+          <p>{body}</p>
         </div>
       </div>
     </>
