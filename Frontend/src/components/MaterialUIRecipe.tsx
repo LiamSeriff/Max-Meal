@@ -12,13 +12,13 @@ interface Props {
   body: string;
 }
 
-export default function ActionAreaCard({ image, header, body }: Props) {
+function ActionAreaCard({ image, header, body }: Props) {
   return (
-    <Card sx={{ maxWidth: 345 }}>
+    <Card sx={{ maxWidth: 300, maxHeight: 300 }}>
       <CardActionArea>
         <CardMedia
           component="img"
-          height="140"
+          height="150"
           image={image}
           alt="recipe image"
         />
@@ -34,3 +34,10 @@ export default function ActionAreaCard({ image, header, body }: Props) {
     </Card>
   );
 }
+
+const StyledMUICard = styled(ActionAreaCard)`
+  width: 200px;
+  height: 300px;
+`;
+
+export default StyledMUICard;

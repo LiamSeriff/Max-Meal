@@ -48,7 +48,6 @@ export const RecipeListContainer = styled.div`
   display: grid;
   overflow-y: auto;
   grid-template-columns: repeat(auto-fill, 300px);
-  row-gap: 1px;
   justify-content: space-evenly;
   top: 15%;
   width: 100vw;
@@ -63,7 +62,6 @@ export const StyledRecipeCard = styled(RecipeCard)`
   width: 300px;
   height: 300px;
   margin: 5px;
-  padding: 5px;
   border-color: black;
   border-style: solid;
   border-width: 2px;

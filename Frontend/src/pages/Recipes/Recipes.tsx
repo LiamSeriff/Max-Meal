@@ -7,7 +7,7 @@ import {
   RecipeListContainer,
   StyledRecipeCard,
 } from "./Recipes_Data";
-import ActionAreaCard from "../../components/MaterialUIRecipe";
+import StyledMUICard from "../../components/MaterialUIRecipe";
 
 const Recipes = () => {
   return (
@@ -29,19 +29,9 @@ const Recipes = () => {
         </InputContainer>
         <RecipeListContainer>
           <StyledRecipeCard
-            className={StyledButton}
+            className={StyledRecipeCard}
             onClick={() => console.log("Clicked")}
           ></StyledRecipeCard>
-          <ActionAreaCard
-            image="src\images\bbq-chicken-pizza.jpeg"
-            header="BBQ chicken pizza"
-            body="bbq chicken pizza"
-          />
-          <ActionAreaCard
-            image="src\images\bbq-chicken-pizza.jpeg"
-            header="BBQ chicken pizza"
-            body="bbq chicken pizza"
-          />
         </RecipeListContainer>
       </PageContainer>
     </>

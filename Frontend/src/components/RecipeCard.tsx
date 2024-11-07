@@ -8,22 +8,25 @@ interface Props {
 }
 
 const StyledCardImage = styled.img`
-  width: 290px;
-  height: 100px;
+  height: 160px;
+  width: 100%;
 `;
+
+const ImageContainer = styled.div``;
 
 const RecipeCard = ({ className }: Props) => {
   return (
     <>
       <div className={className}>
-        <StyledCardImage src={image} alt="..." />
+        <ImageContainer>
+          <StyledCardImage src={image} alt="..." />
+        </ImageContainer>
         <div>
-          <h5>Card title</h5>
+          <h4>Card title</h4>
           <p>
             Some quick example text to build on the card title and make up the
             bulk of the card's content.
           </p>
-          <a href="#">Go somewhere</a>
         </div>
       </div>
     </>
