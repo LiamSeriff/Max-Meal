@@ -4,19 +4,21 @@ export const PageContainer = styled.div`
   position: relative;
   height: 100vh;
   width: 100vw;
-  background-color: tan;
+  background-color: #e8e8e8;
 `;
 
 export const IngredientsContainer = styled.div`
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: flex-start;
+  overflow-y: auto;
   position: absolute;
   top: 15vh;
   left: 5vw;
   height: 70vh;
   width: 30vw;
-  border: black;
-  border-style: solid;
+  border: black solid 1px;
+  padding: 10px;
 `;
 
 export const HeadingContainer = styled.div`
@@ -25,10 +27,10 @@ export const HeadingContainer = styled.div`
   left: 5vw;
   height: 10vh;
   width: 30vw;
-  border: black;
-  border-style: solid;
+  border: black solid 1px;
   display: flex;
   justify-content: center;
+  align-items: center;
 `;
 
 export const MyGroceryListContainer = styled.div`
@@ -37,27 +39,62 @@ export const MyGroceryListContainer = styled.div`
   left: 45vw;
   height: 82vh;
   width: 45vw;
-  border: black;
-  border-style: solid;
+  border: black solid 1px;
+  overflow-y: auto;
+  padding: 10px;
 `;
 
 export const InputContainer = styled.div`
-  position: absolute;
-  top: 2%;
-  left: 2%;
-  height: 5%;
-  width: 96%;
+  width: 100%;
+  margin-bottom: 10px;
 `;
 
 export const Input = styled.input`
-  border-color: black;
-  border-width: 3px;
-  border-style: solid;
+  width: 100%;
+  padding: 8px;
+  border: 2px solid black;
 `;
 
 export const Heading = styled.h1`
-  position: absolute;
-  top: 25%;
   font-size: 3rem;
   color: black;
+`;
+
+export const FilterButton = styled.button`
+  background-color: teal;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+
+  &:hover {
+    background-color: darkcyan;
+  }
+`;
+
+export const IngredientItem = styled.div`
+  display: flex;
+  align-items: center;
+  margin: 5px 0;
+  font-size: 1.2rem;
+`;
+
+export const GrocerySection = styled.div`
+  margin-bottom: 20px;
+
+  h3 {
+    font-size: 1.5rem;
+    color: black;
+    border-bottom: 1px solid black;
+    padding-bottom: 5px;
+  }
+
+  img {
+    display: block;
+    margin-top: 10px;
+    width: 80px;
+    height: auto;
+  }
 `;

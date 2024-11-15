@@ -1,10 +1,32 @@
 import React from "react";
-import Navcolumn from "../../components/Navcolumn/Navcolumn";
+import {
+  Background,
+  CenterColumn,
+  NavcolumnContainer,
+  Logo,
+  Icon,
+  NavItemBtn,
+  NavBtnLink,
+  AboutBtn,
+  AboutBtnLink,
+} from "./Home_Data";
 
 const Home = () => {
   return (
     <>
-      <Navcolumn />
+      <Background>
+        <CenterColumn>
+          <Logo>
+            <Icon />
+            Max Meal
+          </Logo>
+          <NavItemBtn>
+            <NavBtnLink to="/login">Login</NavBtnLink>
+            <NavBtnLink to="/sign-up">Sign Up</NavBtnLink>
+            <AboutBtnLink to="/about">About</AboutBtnLink>
+          </NavItemBtn>
+        </CenterColumn>
+      </Background>
     </>
   );
 };

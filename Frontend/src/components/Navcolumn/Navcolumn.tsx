@@ -7,6 +7,8 @@ import {
   Icon,
   NavItemBtn,
   NavBtnLink,
+  AboutBtn,
+  AboutBtnLink,
 } from "./Navcolumn.elements";
 import { Button } from "../../globalStyles";
 import backgroundImg from "../../images/meal-prep-background-large.jpeg";
@@ -17,6 +19,9 @@ const Navcolumn = () => {
   return (
     <>
       <Background>
+        <AboutBtn>
+          <AboutBtnLink to="/about">About</AboutBtnLink>
+        </AboutBtn>
         <CenterColumn>
           <Logo>
             <Icon />

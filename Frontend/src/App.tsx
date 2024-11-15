@@ -16,6 +16,7 @@ import GroceryList from "./pages/GroceryList/GroceryList";
 import Recipes from "./pages/Recipes/Recipes";
 import MealPlanner from "./pages/MealPlanner/MealPlanner";
 import Profile from "./pages/Profile/Profile";
+import About from "./pages/About/About";
 
 function App() {
   return (
@@ -31,6 +32,7 @@ function App() {
           <Route path="/recipes" element={<Recipes />}></Route>
           <Route path="/meal-planner" element={<MealPlanner />}></Route>
           <Route path="/profile" element={<Profile />}></Route>
+          <Route path="/about" element={<About />}></Route>
         </Routes>
       </Router>
     </>

@@ -56,6 +56,14 @@ export const NavItemBtn = styled.li`
   padding-bottom: 20px;
 `;
 
+export const AboutBtn = styled.li`
+  position: absolute;
+  display: grid;
+  justify-content: right;
+  right: 30px;
+  bottom: 30px;
+`;
+
 export const NavBtnLink = styled(Link)`
   display: flex;
   position: sticky;
@@ -70,4 +78,12 @@ export const NavBtnLink = styled(Link)`
   font-size: 1.5rem;
   border-style: solid;
   outline: none;
+`;
+
+export const AboutBtnLink = styled(NavBtnLink)`
+  color: white;
+  border: black;
+  border-style: solid;
+  background-color: #101522;
+  opacity: 90%;
 `;

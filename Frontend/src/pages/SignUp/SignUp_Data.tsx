@@ -12,7 +12,7 @@ export const Background = styled.div`
   z-index: 1;
 `;
 
-export const CenterColumn = styled.ul`
+export const CenterColumn = styled.div`
   background: #101522;
   height: 100vh;
   display: grid;
