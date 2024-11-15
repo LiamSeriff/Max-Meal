@@ -20,6 +20,12 @@ router.post('/signup', async (req, res) => {
   }
 });
 
+
+
+
+
+
+
 // POST endpoint to handle user login
 router.post('/login', async (req, res) => {
   const { username, password } = req.body;
@@ -31,18 +37,17 @@ router.post('/login', async (req, res) => {
       return res.status(400).json({ success: false, message: 'Invalid username or password' });
     }
 
-
+    // Compare the entered password with the hashed password
     const passwordMatch = await bcrypt.compare(password, user.password);
     if (!passwordMatch) {
       return res.status(400).json({ success: false, message: 'Invalid username or password' });
     }
 
-
-
+    // Passwords match
     res.json({ success: true, message: 'Login successful!' });
   } catch (error) {
     console.error('Login error:', error);
-    res.status(500).json({ success: false, error: 'Login failed' });
+    res.status(500).json({ success: false, message: 'Login failed', error: error.message });
   }
 });
 

@@ -16,15 +16,20 @@ const SignUp = () => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
 
+
   const handleSubmit = async (e: React.FormEvent) => {
+    console.log("handlesubmit before try message");
     e.preventDefault();
   
     const userData = { email, username, password };
 
     try {
+      console.log("trying to send a post request using axios");
       const response = await axios.post('http://localhost:5001/api/signup', userData);
+      console.log("trying to send a post request using axios");
       console.log(response.data);
     } catch(error) {
+      console.log("axios failed in the signup tsx");
       console.error("There was an error signing up:", error);
       alert("Error signing up!");
     }
