@@ -207,7 +207,7 @@ const GroceryList = () => {
 
   const initialGroceryList = [
     {
-      title: "Ingredients for Cheese Pizza",
+      title: "Cheese Pizza",
       items: [
         { name: "Mozzarella Cheese", calories: 85 },
         { name: "Marinara Sauce", calories: 40 },
