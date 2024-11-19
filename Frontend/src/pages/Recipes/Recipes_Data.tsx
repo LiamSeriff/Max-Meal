@@ -48,12 +48,13 @@ export const RecipeListContainer = styled.div`
   display: grid;
   overflow-y: auto;
   grid-template-columns: repeat(auto-fill, 300px);
+  grid-row-gap: 10px;
   justify-content: space-evenly;
   top: 15%;
   width: 100vw;
   height: 85%;
   border: white;
-  border-style: solid;
+  border-style: none;
   border-width: 3px;
 `;
 
@@ -65,6 +66,12 @@ export const StyledRecipeCard = styled(RecipeCard)`
   border-color: black;
   border-style: solid;
   border-width: 0;
+`;
+
+export const RecipeCardContainer = styled.div`
+  margin-top: 10px;
+  width: 300px;
+  height: 300px;
 `;
 
 export const StyledRecipeButton = styled(Button)`
@@ -79,7 +86,7 @@ export const StyledRecipeButton = styled(Button)`
   &:hover {
     transition: all 0.3s ease-out;
     color: white;
-    background-color: #007777;
+    background-color: white;
   }
 `;
 
@@ -117,4 +124,18 @@ export const PopupDiv = styled.div`
   border-color: black;
   border-width: 5px;
   border-radius: 20px;
+`;
+
+export const FilterDiv = styled.div`
+  position: absolute;
+  right: 5%;
+  top: 2%;
+  width: 450px;
+  height: 400px;
+  background-color: white;
+  z-index: 10;
+  border-style: solid;
+  border-color: black;
+  border-width: 4px;
+  border-radius: 3px;
 `;

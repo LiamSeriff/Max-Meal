@@ -9,8 +9,10 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@mantine/hooks": "^7.14.1",
     "@mui/material": "^6.1.6",
     "@mui/styled-engine-sc": "^6.1.6",
+    "@tanstack/react-query": "^5.60.2",
     "bootstrap": "^5.2.3",
     "mongoose": "^8.8.1",
     "react": "^18.3.1",
