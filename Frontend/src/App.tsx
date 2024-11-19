@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import {
   QueryClient,
@@ -17,7 +16,7 @@ import GlobalStyle from "./globalStyles";
 import Home from "./pages/HomePage/Home";
 import Login from "./pages/Login/Login";
 import SignUp from "./pages/SignUp/SignUp";
-import UserHome from "./pages/UserHome/UserHome";
+import UserHome from "./pages/UserHome/UserHome";  // Imported here
 import GroceryList from "./pages/GroceryList/GroceryList";
 import Recipes from "./pages/Recipes/Recipes";
 import MealPlanner from "./pages/MealPlanner/MealPlanner";
@@ -27,9 +26,6 @@ import About from "./pages/About/About";
 const queryClient = new QueryClient();
 
 function App() {
-  //const [alertVisible, setAlertVisibility] = useState(false)
-  //<ListGroup items={items} heading="Cities" onSelectItem={handleSelectItem}/>
-
   return (
     <>
       <QueryClientProvider client={queryClient}>
