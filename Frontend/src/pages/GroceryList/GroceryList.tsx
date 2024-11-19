@@ -327,26 +327,27 @@ const GroceryList = () => {
           ))}
         </IngredientsContainer>
         <MyGroceryListContainer>
-          <h2>My Grocery List</h2>
-          {myGroceryList.map((section, index) => (
-            <GrocerySection key={index}>
-              <h3>{section.title}</h3>
-              {section.items.map((item, idx) => (
-                <IngredientItem key={idx}>
-                  ★ {item.name} - {item.calories} cal
-                  <span
-                    style={{ cursor: "pointer", marginLeft: "10px", color: "red" }}
-                    onClick={() => handleRemoveIngredient(item.name, section.title)}
-                  >
-                    ✕
-                  </span>
-                </IngredientItem>
-              ))}
-            </GrocerySection>
-          ))}
-          <CalorieTracker>Total Calories: {totalCalories} cal</CalorieTracker>
-          <FilterButton>Filter Dishes</FilterButton>
-        </MyGroceryListContainer>
+  <CalorieTracker>Total Calories: {totalCalories} cal</CalorieTracker>
+  <h2>My Grocery List</h2>
+  {myGroceryList.map((section, index) => (
+    <GrocerySection key={index}>
+      <h3>{section.title}</h3>
+      {section.items.map((item, idx) => (
+        <IngredientItem key={idx}>
+          ★ {item.name} - {item.calories} cal
+          <span
+            style={{ cursor: "pointer", marginLeft: "10px", color: "red" }}
+            onClick={() => handleRemoveIngredient(item.name, section.title)}
+          >
+            ✕
+          </span>
+        </IngredientItem>
+      ))}
+    </GrocerySection>
+  ))}
+  <FilterButton>Filter Dishes</FilterButton>
+</MyGroceryListContainer>
+
       </ContentWrapper>
     </PageContainer>
   );
