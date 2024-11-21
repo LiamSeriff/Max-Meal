@@ -44,6 +44,7 @@ const Recipes = () => {
   const [filterOpen, setFilterOpen] = useState(false);
   const [query, setQuery] = useState("chicken");
   const [recipes, setRecipes] = useState<any[]>([]);
+  const [next, setNext] = useState("");
   const [search, setSearch] = useState("");
 
   const getRecipes = async () => {
@@ -51,6 +52,7 @@ const Recipes = () => {
 
     console.log(response.data);
     setRecipes(response.data.hits);
+    setNext(response.data._links.next.href);
   };
 
   React.useEffect(() => {
@@ -80,6 +82,14 @@ const Recipes = () => {
     },
   });
 
+  const getNextRecipes = async () => {
+    const response = await axios.get(next);
+    setNext(response.data._links.next.href);
+    response.data.hits.map((hit: any) => recipes.push(hit));
+    console.log(recipes);
+    return response;
+  };
+
   const lastRecipeRef = React.useRef<HTMLElement>(null);
 
   const { ref, entry } = useIntersection({
@@ -88,7 +98,7 @@ const Recipes = () => {
   });
 
   React.useEffect(() => {
-    if (entry?.isIntersecting) fetchNextPage();
+    if (entry?.isIntersecting) getNextRecipes();
   }, [entry]);
 
   const _recipes = data?.pages.flatMap((page) => page);
