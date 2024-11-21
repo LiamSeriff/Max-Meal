@@ -12,34 +12,41 @@ export const PageContainer = styled.div`
 export const InputContainer = styled.div`
   position: absolute;
   display: flex;
-  top: 5%;
-  left: 30%;
-  height: 60px;
-  width: 40%;
+  top: 5vh;
+  left: 35vw;
+  height: 7vh;
+  width: auto;
 `;
 
 export const Input = styled.input`
+  position: relative;
   border-color: black;
   border-width: 3px;
   border-style: solid;
   margin-right: 5px;
+  height: 7vh;
+  width: 25vw;
+  font-size: 1rem;
 `;
 
 export const StyledButton = styled(Button)`
   font-family: "Source Sans Pro", sans-serif;
-  font-size: 16px;
+  font-size: 1rem;
   color: white;
   background-color: teal;
   border-style: solid;
   border-color: black;
   border-width: 3px;
   border-radius: 5px;
-  width: 70px;
+  width: 10vw;
+  height: 7vh;
+  margin-right: 5px;
 
   &:hover {
     transition: all 0.3s ease-out;
     color: white;
     background-color: #007777;
+    border-color: white;
   }
 `;
 
@@ -116,26 +123,65 @@ export const CloseButton = styled(Button)`
 export const PopupDiv = styled.div`
   position: absolute;
   width: 70vw;
-  height: 70vh;
+  height: 90vh;
   margin-left: 15vw;
-  margin-top: 15vh;
+  margin-top: 5vh;
   background-color: white;
   border-style: solid;
   border-color: black;
   border-width: 5px;
   border-radius: 20px;
+  color: black;
+  padding: 50px;
+  overflow-y: auto;
 `;
 
 export const FilterDiv = styled.div`
   position: absolute;
-  right: 5%;
+  right: 4%;
   top: 2%;
-  width: 450px;
-  height: 400px;
+  width: 25vw;
+  height: 45vh;
+  padding: 5px;
   background-color: white;
   z-index: 10;
   border-style: solid;
   border-color: black;
   border-width: 4px;
   border-radius: 3px;
+  overflow-y: auto;
+  overflow-x: hidden;
+`;
+
+export const CheckboxInput = styled.input`
+  margin: 4px;
+  height: 20px;
+  width: 20px;
+
+  &:hover {
+    cursor: pointer;
+  }
+`;
+
+export const FilterLabel = styled.label`
+  user-select: none;
+  font-size: 20px;
+
+  &:hover {
+    cursor: pointer;
+  }
+`;
+
+export const FilterFieldset = styled.fieldset`
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 12.5vw 12.5vw);
+`;
+
+export const FilterHeader = styled.h3`
+  user-select: none;
+  text-decoration: underline;
+`;
+
+export const StyledForm = styled.form`
+  height: 7vh;
 `;

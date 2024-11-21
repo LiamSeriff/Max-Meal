@@ -2,6 +2,7 @@ const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
 require('dotenv').config();
+const axios = require('axios');
 
 console.log("MONGO_URI:", process.env.MONGO_URI);
 
@@ -19,6 +20,14 @@ mongoose.set('debug', true);
 
 // Define a test route
 app.get('/', (req, res) => res.send('API is running'));
+
+// Route for getting recipes from Edamam API
+app.get('/recipes/:query', async (req, res) => {
+    const response = await axios.get(`https://api.edamam.com/api/recipes/v2?type=public&q=${req.params.query}&app_id=${process.env.APP_ID}&app_key=${process.env.APP_KEY}`)
+
+    console.log(response.data);
+    res.json(response.data);
+})
 
 const authRoutes = require('./routes/authRoutes');
 app.use("/api", authRoutes);

@@ -5,7 +5,7 @@ interface Props {
   className: string;
   image: string;
   header: string;
-  body: string;
+  ingredients: string;
 }
 
 const StyledCardImage = styled.img`
@@ -23,16 +23,16 @@ const StyledHeader4 = styled.h4`
 
 const ImageContainer = styled.div``;
 
-const RecipeCard = ({ className, image, header, body }: Props) => {
+const RecipeCard = ({ className, image, header, ingredients }: Props) => {
   return (
     <>
       <div className={className}>
         <ImageContainer>
-          <StyledCardImage src={image} alt="..." />
+          <StyledCardImage src={image} alt="Loading..." />
         </ImageContainer>
         <div>
           <StyledHeader4>{header}</StyledHeader4>
-          <p>{body}</p>
+          <p>{ingredients}</p>
         </div>
       </div>
     </>
