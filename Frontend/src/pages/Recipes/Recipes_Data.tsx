@@ -33,7 +33,7 @@ export const StyledButton = styled(Button)`
   font-family: "Source Sans Pro", sans-serif;
   font-size: 1rem;
   color: white;
-  background-color: teal;
+  background-color: #009f97;
   border-style: solid;
   border-color: black;
   border-width: 3px;
@@ -45,7 +45,7 @@ export const StyledButton = styled(Button)`
   &:hover {
     transition: all 0.3s ease-out;
     color: white;
-    background-color: #007777;
+    background-color: #009f97;
     border-color: white;
   }
 `;
@@ -66,7 +66,7 @@ export const RecipeListContainer = styled.div`
 `;
 
 export const StyledRecipeCard = styled(RecipeCard)`
-  background-color: teal;
+  background-color: #009f97;
   width: 300px;
   height: 300px;
   margin-left: 2px;
@@ -82,7 +82,7 @@ export const RecipeCardContainer = styled.div`
 `;
 
 export const StyledRecipeButton = styled(Button)`
-  background-color: teal;
+  background-color: #009f97;
   border-style: solid;
   border-color: black;
   border-width: 3px;

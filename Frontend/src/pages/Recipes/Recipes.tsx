@@ -103,6 +103,10 @@ const Recipes = () => {
 
   const _recipes = data?.pages.flatMap((page) => page);
 
+  function float2int(value: any) {
+    return value | 0;
+  }
+
   return (
     <>
       <PageContainer>
@@ -124,11 +128,12 @@ const Recipes = () => {
               </p>
               <hr />
               <p>
-                <strong>Calories:</strong> {recipes[currRecipe].recipe.calories}
+                <strong>Calories:</strong>{" "}
+                {float2int(recipes[currRecipe].recipe.calories)}
               </p>
               <p>
                 <strong>Glycemic Index:</strong>{" "}
-                {recipes[currRecipe].recipe.glycemicIndex}
+                {float2int(recipes[currRecipe].recipe.glycemicIndex)}
               </p>
               <hr />
               <h2>Ingredients: </h2>
